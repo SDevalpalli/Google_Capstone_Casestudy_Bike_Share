@@ -16,17 +16,17 @@ library(ggplot2)
 
 ## Reading the excel files
 
-dfFeb <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Feb2022.xlsx")
-dfMar <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Mar2022.xlsx")
-dfApr <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Apr2022.xlsx")
-dfMay <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/May2022.xlsx")
-dfJun <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Jun2022.xlsx")
-dfJul <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Jul2022.xlsx")
-dfAug <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Aug2022.xlsx")
-dfSep <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Sep2022.xlsx")
-dfOct <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Oct2022.xlsx")
-dfNov <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Nov2022.xlsx")
-dfDec <- read_excel("/kaggle/input/casestudy1-cyclistic-feb2022-dec2022/Dec2022.xlsx")
+dfFeb <- read_excel("ProcessedData/Feb2022.xlsx")
+dfMar <- read_excel("ProcessedData/Mar2022.xlsx")
+dfApr <- read_excel("ProcessedData/Apr2022.xlsx")
+dfMay <- read_excel("ProcessedData/May2022.xlsx")
+dfJun <- read_excel("ProcessedData/Jun2022.xlsx")
+dfJul <- read_excel("ProcessedData/Jul2022.xlsx")
+dfAug <- read_excel("ProcessedData/Aug2022.xlsx")
+dfSep <- read_excel("ProcessedData/Sep2022.xlsx")
+dfOct <- read_excel("ProcessedData/Oct2022.xlsx")
+dfNov <- read_excel("ProcessedData/Nov2022.xlsx")
+dfDec <- read_excel("ProcessedData/Dec2022.xlsx")
 
 ## Getting the column names of all the datasets
 
