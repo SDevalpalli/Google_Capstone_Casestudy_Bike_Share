@@ -167,7 +167,7 @@ all_rides_v2 %>%
 ## Output File 1: Creating a csv file to view in excel or Tableau for Average Ride Length on days of the week
 
 average_ride_length_week<- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$day_of_week, FUN = mean)
-write.csv(average_ride_length_week, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/avg_ride_length_week.csv")
+write.csv(average_ride_length_week, file = "Documentation/avg_ride_length_week.csv")
 
 ##  Plot 2 : Analysis and Visualization of no. of trips by weekday
 ##################################################################
@@ -196,7 +196,7 @@ all_rides_v2 %>%
   group_by(member_casual, day_of_week) %>%
   summarise(cnt = n()) %>% 
   as.data.frame() 
-write.csv(total_rides_week, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_rides_week.csv")
+write.csv(total_rides_week, file = "Documentation/total_rides_week.csv")
 
 ## Plot 3: Visualization for total duration on the days in every week of the year
 #################################################################################
@@ -213,7 +213,7 @@ all_rides_v2 %>%
   labs(
     title = "Total Duration of the Rides by Day of the Week",
     subtitle = "Total duration of rides for every week",
-    caption = "Fig 3",
+    caption = "fig 3",
     x = "day of the week",
     y = "total duration of rides"
   )+
@@ -222,7 +222,7 @@ all_rides_v2 %>%
 ## Output File 3: Creating a csv file to view in excel or Tableau for Average Ride Length on days of the week
 
 total_ride_length_week <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$day_of_week, FUN = sum)
-write.csv(total_ride_length_week, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_ride_length_week.csv")
+write.csv(total_ride_length_week, file = "Documentation/total_ride_length_week.csv")
 
 ##       Observations  by Month
 
@@ -255,7 +255,7 @@ total_rides_month <- all_rides_v2 %>%
   group_by(member_casual, month_name) %>%
   summarise(cnt = n()) %>% 
   as.data.frame() 
-write.csv(total_rides_month, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_rides_month.csv")
+write.csv(total_rides_month, file = "Documentation/total_rides_month.csv")
 
 ## Plot 5:  Analysis and Visualization average duration of rides by month
 #########################################################################
@@ -283,7 +283,7 @@ all_rides_v2 %>%
 ## Output File 5: Creating a csv file to view in excel or Tableau for average ride length by month 
 
 average_ride_length_month <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$month_name, FUN = mean)
-write.csv(average_ride_length_month, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/average_ride_length_month.csv")
+write.csv(average_ride_length_month, file = "Documentation/average_ride_length_month.csv")
 
 ## Plot 6 : Analysis and Visualization total duration of rides by month
 #######################################################################
@@ -311,7 +311,7 @@ all_rides_v2 %>%
 ## Output File 7: Creating a csv file to view in excel or Tableau for total duration of by month 
 
 total_ride_length_month <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$month_name, FUN = sum)
-write.csv(total_ride_length_month, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_ride_length_month.csv")
+write.csv(total_ride_length_month, file = "Documentation/total_ride_length_month.csv")
 
 ## Observations by Day
 
@@ -343,7 +343,7 @@ total_rides_day <- all_rides_v2 %>%
   group_by(member_casual, day ) %>%
   summarise(cnt = n()) %>% 
   as.data.frame() 
-write.csv(total_rides_day, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_rides_day.csv")
+write.csv(total_rides_day, file = "Documentation/total_rides_day.csv")
 
 ##  Plot 8: Analysis and Visualization Average Duration of Rides by Day
 #######################################################################
@@ -371,7 +371,7 @@ all_rides_v2 %>%
 ## Output File 8: Creating a csv file to view in excel or Tableau for average duration of rides by day
 
 average_ride_length_day <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$day, FUN = mean) %>%
-  write.csv(average_ride_length_day, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/average_ride_length_day.csv")
+  write.csv(average_ride_length_day, file = "Documentation/average_ride_length_day.csv")
 
 ## Plot 9 : Analysis and Visualization Total Duration of Rides by Day
 #####################################################################
@@ -399,4 +399,4 @@ all_rides_v2 %>%
 ## Output File 9 :  Creating a csv file to view in excel or Tableau for total duration of rides by day
 
 Total_ride_length_day <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$day, FUN = sum)
-write.csv(Total_ride_length_day, file = "/kaggle/working/Casestudy1_Cyclistic_Frb2022_Dec2022/total_ride_length_day.csv")
+write.csv(Total_ride_length_day, file = "Documentation/total_ride_length_day.csv")
