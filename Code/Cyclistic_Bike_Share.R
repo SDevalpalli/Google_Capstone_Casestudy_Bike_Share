@@ -103,7 +103,7 @@ str(all_rides)
 
 ## Create a new dataframe where the ride_length is not negative as it is saved as version 2 all_rides_v2
 
-all_rides_v2 <- all_rides[!(all_rides$ride_length<0)]
+all_rides_v2 <- all_rides 
 
 ## Check if ride_length is a factor or numeric
 
@@ -370,8 +370,12 @@ all_rides_v2 %>%
 
 ## Output File 8: Creating a csv file to view in excel or Tableau for average duration of rides by day
 
-average_ride_length_day <- aggregate(all_rides_v2$ride_length ~ all_rides_v2$member_casual + all_rides_v2$day, FUN = mean) %>%
-  write.csv(average_ride_length_day, file = "Documentation/average_ride_length_day.csv")
+average_ride_length_day <- all_rides_v2 %>%
+  group_by(member_casual, day ) %>%
+  summarise(mean(ride_length) %>% 
+  as.data.frame() 
+write.csv(average_ride_length_day, file = "Documentation/average_ride_length_day.csv")
+
 
 ## Plot 9 : Analysis and Visualization Total Duration of Rides by Day
 #####################################################################
